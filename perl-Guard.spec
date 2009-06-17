@@ -11,12 +11,11 @@ Version:	1.02
 Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Guard/%{pdir}-%{version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	c5ffd0db77ead5b8236dd7aad068bdf1
-#URL:		http://search.cpan.org/dist/Guard/
+URL:		http://search.cpan.org/dist/Guard/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-# generic URL, check or change before uncommenting
 %if %{with tests}
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
