@@ -11,13 +11,11 @@ Version:	1.021
 Release:	2
 License:	unknown
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	6c15e885c089115f8263a5873ed74f1e
 URL:		http://search.cpan.org/dist/Guard/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,9 +28,13 @@ guard objects, which execute a given code block when destroyed, and
 scoped guards, which are tied to the scope exit.
 
 %description -l pl.UTF-8
-Moduł ten implementuje tzw "strażników". Strażnik jest czymś (zwykle
-obiektem), co strzeże zasobu, zapewniając jego usunięcie wtedy kiedy
-jest ono pożądane.
+Moduł ten implementuje tzw. "strażników". Strażnik jest czymś (zwykle
+obiektem), co strzeże zasobu, zapewniając jego usunięcie wtedy, kiedy
+jest ono oczekiwane.
+
+W szczegóności moduł ten obsługuje dwa rodzaje strażników:
+- obiekty strażników, wykonujące dany blok kodu w trakcie niszczenia
+- strażników zakresowych, powiązanych z zakończeniem zakresu (scope).
 
 %prep
 %setup -q -n %{pdir}-%{version}
@@ -57,9 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README
+%doc Changes
 %{perl_vendorarch}/Guard.pm
-%dir %{perl_vendorarch}/auto/Guard/
+%dir %{perl_vendorarch}/auto/Guard
 %{perl_vendorarch}/auto/Guard/Guard.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Guard/Guard.so
-%{_mandir}/man3/*
+%{_mandir}/man3/Guard.3pm*
