@@ -7,12 +7,12 @@
 Summary:	Guard - safe cleanup blocks
 Summary(pl.UTF-8):	Guard - bezpieczne czyszczenie bloków
 Name:		perl-Guard
-Version:	1.021
-Release:	2
+Version:	1.022
+Release:	1
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
-# Source0-md5:	6c15e885c089115f8263a5873ed74f1e
+# Source0-md5:	8d1d8b942fd5d0240f47906a6d6fac8c
 URL:		http://search.cpan.org/dist/Guard/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
