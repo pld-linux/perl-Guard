@@ -9,7 +9,8 @@ Summary(pl.UTF-8):	Guard - bezpieczne czyszczenie bloków
 Name:		perl-Guard
 Version:	1.022
 Release:	1
-License:	unknown
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/M/ML/MLEHMANN/%{pdir}-%{version}.tar.gz
 # Source0-md5:	8d1d8b942fd5d0240f47906a6d6fac8c
@@ -59,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes
+%doc COPYING Changes
 %{perl_vendorarch}/Guard.pm
 %dir %{perl_vendorarch}/auto/Guard
 %{perl_vendorarch}/auto/Guard/Guard.bs
