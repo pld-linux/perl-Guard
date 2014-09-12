@@ -63,6 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING Changes
 %{perl_vendorarch}/Guard.pm
 %dir %{perl_vendorarch}/auto/Guard
-%{perl_vendorarch}/auto/Guard/Guard.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Guard/Guard.so
 %{_mandir}/man3/Guard.3pm*
