@@ -8,7 +8,7 @@ Summary:	Guard - safe cleanup blocks
 Summary(pl.UTF-8):	Guard - bezpieczne czyszczenie bloków
 Name:		perl-Guard
 Version:	1.022
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
